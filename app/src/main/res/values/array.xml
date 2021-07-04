@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nameArray">
+        <item>Заметка 1</item>
+        <item>Заметка 2</item>
+        <item>Заметка 3</item>
+        <item>Заметка 4</item>
+        <item>Заметка 5</item>
+        <item>Заметка 6</item>
+        <item>Заметка 7</item>
+        </string-array>
+
+    <string-array name="DescriptionArray">
+        <item>Описание заметки 1</item>
+        <item>Описание заметки 2</item>
+        <item>Описание заметки 3</item>
+        <item>Описание заметки 4</item>
+        <item>Описание заметки 5</item>
+        <item>Описание заметки 6</item>
+        <item>Описание заметки 7</item>
+    </string-array>
+    <integer-array name="DateArray">
+        <item>20200201</item>
+        <item>20200201</item>
+        <item>20200201</item>
+        <item>20200201</item>
+        <item>20200201</item>
+        <item>20200201</item>
+        <item>20200201</item>
+        <item>20200201</item>
+
+    </integer-array>
+</resources>
