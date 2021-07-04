@@ -59,6 +59,9 @@ public class NoteFragment extends Fragment {
         }
         initTV(view);
         getNotes(view, positionNote);
+        if (savedInstanceState != null) { // не увеерн, что это не сломает вашу архитектуру, просто интуитивно добавил
+            showNote(positionNote);
+        }
     }
 
 
