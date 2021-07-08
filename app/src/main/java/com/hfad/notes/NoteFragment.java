@@ -24,29 +24,28 @@ public class NoteFragment extends Fragment {
 
     public static final String NUM_NOTE = "numberNote";
     public static final String ARRAY_NOTE = "arrayNote";
-    private int positionNote;
+    int positionNote;
     ArrayList<Note> arrayList;
     Note note;
     FragmentManager manager;
     FragmentTransaction transaction;
     Note note1 = new Note();
 
+    public ArrayList<Note> addArray(){
+        return this.arrayList;
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     //сохраняем позицию выбранного эл-та
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_note, container, false);
-
         return view;
-
     }
 
     @Override
@@ -55,16 +54,16 @@ public class NoteFragment extends Fragment {
 
         if (savedInstanceState != null) {
             positionNote = savedInstanceState.getInt(NUM_NOTE);
-            // arrayList = (ArrayList<Note>) savedInstanceState.getSerializable(ARRAY_NOTE);
         }
-        initTV(view);
+        initTV();
         getNotes(view, positionNote);
+        if (savedInstanceState != null) {
+            showNote(positionNote);
+        }
     }
 
-
-    private void initTV(View v) {
-
-
+    //Записываем в массив объекты
+     ArrayList<Note> initTV() {
         arrayList = new ArrayList<>();
 
         String[] nameArray = getResources().getStringArray(R.array.nameArray);
@@ -78,7 +77,7 @@ public class NoteFragment extends Fragment {
             note.setDateCreateNotes(dateArray[i]);
             arrayList.add(note);
         }
-
+    return  arrayList;
     }
 
     private void getNotes(View v, int posi) {
@@ -87,13 +86,11 @@ public class NoteFragment extends Fragment {
         try {
             for (int i = 0; i < arrayList.size(); i++) {
                 note1 = arrayList.get(i);
-
                 String name = note1.getNameNote();
                 TextView tv = new TextView(getContext());
                 tv.setText(name);
                 tv.setTextSize(30);
                 layout.addView(tv);
-
                 Log.e("!!!!", note1.getNameNote() + "");
                 final int fi = i;
                 tv.setOnClickListener(new View.OnClickListener() {
@@ -105,10 +102,9 @@ public class NoteFragment extends Fragment {
                 });
             }
         } catch (Exception e) {
-
             Log.e("error", "error");
-
         }
+
     }
 
     @Override
@@ -121,12 +117,10 @@ public class NoteFragment extends Fragment {
 
     //метод который показывает заметку во врагменте
     private void showNote(int i) {
-        Log.d("!!!dsfkjn", "Нажали на " + i);
-
         OpenNoteFragment openNoteFragment = new OpenNoteFragment(i, arrayList);
         manager = requireActivity().getSupportFragmentManager();
         transaction = manager.beginTransaction();
-        transaction.replace(R.id.note_fragment, openNoteFragment);
+        transaction.replace(R.id.fragment_container, openNoteFragment);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.commit();
 

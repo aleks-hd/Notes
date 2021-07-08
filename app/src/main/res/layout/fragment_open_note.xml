@@ -10,21 +10,21 @@
        android:id="@+id/tv_nameNodes"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:textSize="20sp"
+       android:textSize="@dimen/sizeTextZag"
        android:textStyle="bold"
-       android:hint="Name"/>
+       android:hint="@string/hint"/>
     <TextView
         android:id="@+id/tv_DescriptionNodes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
+        android:textSize="@dimen/sizeTextDescription"
         android:textStyle="italic"
-        android:hint="Name"/>
+        android:hint="@string/hint"/>
     <TextView
         android:id="@+id/tv_DateCreateNodes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:hint="Name"/>
+        android:textSize="@dimen/sizeTextData"
+        android:hint="@string/hint"/>
 
 </LinearLayout>

@@ -8,14 +8,14 @@
     <fragment
         android:id="@+id/fragment_one"
         android:name="com.hfad.notes.NoteFragment"
-        android:layout_width="0sp"
+        android:layout_width="@dimen/sizeNullWidght"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical" />
 
     <LinearLayout
         android:id="@+id/note_fragment"
-        android:layout_width="0sp"
+        android:layout_width="@dimen/sizeNullWidght"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">

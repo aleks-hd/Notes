@@ -20,11 +20,12 @@ public class OpenNoteFragment extends Fragment {
     TextView tvNameNote, tvDescription, tvDateCreateNote;
     private int index;
 ArrayList<Note> arrayList;
-    public OpenNoteFragment() {
 
+
+    public OpenNoteFragment() {
     }
 
-    public OpenNoteFragment(int index,ArrayList<Note> array) {
+   public OpenNoteFragment(int index,ArrayList<Note> array) {
         this.index = index;
         this.arrayList = array;
     }

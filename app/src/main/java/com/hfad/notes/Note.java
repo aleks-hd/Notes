@@ -1,11 +1,17 @@
 package com.hfad.notes;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Date;
 
-public class Note {
+public class Note  {
     private String nameNote;
     private String DescriptionNotes;
     private int dateCreateNotes;
+
+
+
 
 
 
@@ -33,4 +39,6 @@ public class Note {
 
         this.dateCreateNotes = dateCreateNotes;
     }
+
+
 }
