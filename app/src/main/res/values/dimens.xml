@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sizeNullHeight">0dp</dimen>
-    <dimen name="sizeNullWidght">0dp</dimen>
-    <dimen name="sizeTextZag">20sp</dimen>
-    <dimen name="sizeTextData">10sp</dimen>
-    <dimen name="sizeTextDescription">15sp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
-    <dimen name="nav_header_height">176dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="text_size">30sp</dimen>
+
+    <dimen name="height_button">50dp</dimen>
+    <dimen name="spaceWidht">5dp</dimen>
+    <dimen name="Ziro">0dp</dimen>
+    <dimen name="widhtImageTwoFragment">350dp</dimen>
+    <dimen name="heightImageTwoFragment">350dp</dimen>
 </resources>
