@@ -6,6 +6,9 @@
     <string name="favoritItemMenu">Избранное</string>
     <string name="MainNameItemMenu">Главная</string>
     <string name="NameSettingsItemMenu">Настройки</string>
+    <string name="item1">Удалить</string>
+    <string name="item2">Изменить</string>
+    <string name="item0">Открыть</string>
 
     <string-array name="nameArray">
         <item>Pictures №1</item>

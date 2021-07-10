@@ -1,5 +1,6 @@
 package com.hfad.notes;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,10 +10,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class OneFragment extends Fragment {
@@ -52,6 +57,35 @@ public class OneFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initTextViev(view);
+        // initPopupMenu(view);
+    }
+
+    private void initPopupMenu(View view, View tv, int index) {
+        Activity activity = requireActivity();
+        PopupMenu popupMenu = new PopupMenu(activity, tv);
+        activity.getMenuInflater().inflate(R.menu.popup, popupMenu.getMenu());
+
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id) {
+                    case R.id.item0_popup:
+                        initnewFragment(index);
+                        return true;
+                    case R.id.item1_popup:
+                        Toast.makeText(getContext(), "Удалить", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.item2_popup:
+                        Toast.makeText(getContext(), "Изменить", Toast.LENGTH_SHORT).show();
+                        return true;
+                }
+
+                return false;
+
+            }
+        });
+        popupMenu.show();
     }
 
     void initTextViev(View view) {
@@ -64,9 +98,13 @@ public class OneFragment extends Fragment {
             linearLayout.addView(tv);
             Integer index = i;
             tv.setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View view) {
-                    initnewFragment(index);
+                    Toast.makeText(getContext(), "Что бы открыть фрагмент ужерживайте нажитие", Toast.LENGTH_SHORT).show();
+
+                    // initnewFragment(index);
+                    initPopupMenu(view, tv, index);
                 }
             });
         }
