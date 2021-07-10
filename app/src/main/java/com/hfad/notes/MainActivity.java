@@ -1,12 +1,14 @@
 package com.hfad.notes;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import androidx.appcompat.widget.Toolbar;
+
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +22,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initButton();
         initListener();
+
+      //  initToolbar();
+
+    }
+
+    private void initToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolBarContainer);
+        setSupportActionBar(toolbar);
     }
 
 
