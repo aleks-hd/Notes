@@ -9,6 +9,10 @@
     <string name="item1">Удалить</string>
     <string name="item2">Изменить</string>
     <string name="item0">Открыть</string>
+    <string name="NameHeaderNavig">Заголовок</string>
+    <string name="navigation_drawer_open">Открыть</string>
+    <string name="navigation_drawer_close">Закрыть</string>
+    <string name="NameSettingForLayout">ТУТ БУДУТ НАСТРОЙКИ</string>
 
     <string-array name="nameArray">
         <item>Pictures №1</item>

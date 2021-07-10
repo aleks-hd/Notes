@@ -6,4 +6,6 @@
     <dimen name="Ziro">0dp</dimen>
     <dimen name="widhtImageTwoFragment">350dp</dimen>
     <dimen name="heightImageTwoFragment">350dp</dimen>
+    <dimen name="TextSizeHeaderNavigation">40sp</dimen>
+    <dimen name="SizeTextSettingForLayout">50sp</dimen>
 </resources>
